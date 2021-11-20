@@ -45,7 +45,28 @@ public class ProveedorDaoImpl implements ProveedorDao{
 
     @Override
     public int update(Proveedor proveedor) {
-        return 0;
+
+        int actualizar = -1;
+
+        Statement stm= null;
+        Connection con=null;
+
+        String sql="UPDATE proveedor values (NULL,'"+proveedor.getNombre()+"')";
+
+        try {
+            con= Conexion.conectar();
+            stm= con.createStatement();
+            stm.execute(sql);
+            actualizar=1;
+            stm.close();
+            con.close();
+        } catch (SQLException e) {
+            System.out.println("Error: Clase ClienteDaoImple, método registrar");
+            e.printStackTrace();
+        }
+        return actualizar;
+
+
     }
 
 }

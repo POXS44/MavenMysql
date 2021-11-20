@@ -73,6 +73,7 @@ public class ProveedorClase extends JInternalFrame  {
 
         // boton guardar
         JButton btnGuardar = new JButton();
+        JButton btnActualizar = new JButton();
         btnGuardar.setText("Guardar");
         btnGuardar.setPreferredSize(new Dimension(120, 50));
         btnGuardar.setFocusable(false);
@@ -86,6 +87,8 @@ public class ProveedorClase extends JInternalFrame  {
         btnCerrar.setEnabled(true);
         btnCerrar.setToolTipText("Cierrar el Formulario");
 
+
+
         btnCerrar.addActionListener((ActionEvent arg0) -> {
             cerrar();
         });
@@ -96,6 +99,16 @@ public class ProveedorClase extends JInternalFrame  {
             daoimpl.insert(proveedor);
             btnGuardar.setEnabled(false);
         });
+
+        //ACTUALIZAR
+        btnActualizar.addActionListener((ActionEvent arg0) -> {
+            actualizar();
+            Proveedor proveedor = new Proveedor(entradaTexto.getText());
+            ProveedorDao daoimpl = new ProveedorDaoImpl();
+            daoimpl.update(proveedor);
+            btnActualizar.setEnabled(false);
+        });
+
 
         //Agrega los componentes al formulario
         pnlTitle.add(Box.createRigidArea(new Dimension(10, 10)));
@@ -116,5 +129,9 @@ public class ProveedorClase extends JInternalFrame  {
     private void guardar() {
 
     }
-// Ps lo tenemos mas o menos 
+
+    private void actualizar() {
+
+    }
+// Ps lo tenemos mas o menos
 }
