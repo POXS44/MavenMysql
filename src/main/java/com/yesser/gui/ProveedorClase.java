@@ -65,7 +65,7 @@ public class ProveedorClase extends JInternalFrame  {
 
         // JTextField
         JTextField entradaTexto = new JTextField();
-        entradaTexto.setText("Yesser Miranda");
+        entradaTexto.setText("Maje Shiva");
 
         // agregar al panel central
         panel.add(texto);
@@ -116,5 +116,5 @@ public class ProveedorClase extends JInternalFrame  {
     private void guardar() {
 
     }
-
+// Ps lo tenemos mas o menos 
 }
