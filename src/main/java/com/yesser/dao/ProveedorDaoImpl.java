@@ -51,7 +51,7 @@ public class ProveedorDaoImpl implements ProveedorDao{
         Statement stm= null;
         Connection con=null;
 
-        String sql="UPDATE proveedor values (NULL,'"+proveedor.getNombre()+"')";
+        String sql="UPDATE proveedor SET nombre = '"+proveedor.getNombre()+"' WHERE id = 2";
 
         try {
             con= Conexion.conectar();

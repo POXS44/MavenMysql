@@ -87,7 +87,7 @@ public class ProveedorClase extends JInternalFrame  {
         btnActualizar.setPreferredSize(new Dimension(120, 50));
         btnActualizar.setFocusable(false);
         btnActualizar.setEnabled(true);
-        btnActualizar.setToolTipText("Guarda los cambios de los campos del Formulario");
+        btnActualizar.setToolTipText("Actualiza los cambios de los campos del Formulario");
 
         JButton btnCerrar = new JButton();
         btnCerrar.setText("Cerrar");
