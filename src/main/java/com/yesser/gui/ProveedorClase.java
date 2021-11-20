@@ -73,12 +73,21 @@ public class ProveedorClase extends JInternalFrame  {
 
         // boton guardar
         JButton btnGuardar = new JButton();
-        JButton btnActualizar = new JButton();
+
+
         btnGuardar.setText("Guardar");
         btnGuardar.setPreferredSize(new Dimension(120, 50));
         btnGuardar.setFocusable(false);
         btnGuardar.setEnabled(true);
         btnGuardar.setToolTipText("Guarda los cambios de los campos del Formulario");
+
+        ///VALORES DEL BOTON ACTUALIZAR
+        JButton btnActualizar = new JButton();
+        btnActualizar.setText("ACTUALIZAR");
+        btnActualizar.setPreferredSize(new Dimension(120, 50));
+        btnActualizar.setFocusable(false);
+        btnActualizar.setEnabled(true);
+        btnActualizar.setToolTipText("Guarda los cambios de los campos del Formulario");
 
         JButton btnCerrar = new JButton();
         btnCerrar.setText("Cerrar");
@@ -114,9 +123,10 @@ public class ProveedorClase extends JInternalFrame  {
         pnlTitle.add(Box.createRigidArea(new Dimension(10, 10)));
         pnlTitle.add(lblTitle);
 
-        pnlButton.add(Box.createRigidArea(new Dimension(60, 10)));
+        pnlButton.add(Box.createRigidArea(new Dimension(100, 20)));
         pnlButton.add(btnCerrar);
         pnlButton.add(btnGuardar);
+        pnlButton.add(btnActualizar);
 
         pnlCentral.add(panel);
 
