@@ -4,7 +4,7 @@ import com.yesser.modelo.Proveedor;
 
 import java.util.List;
 
-public class ProveedorDao {
+public interface ProveedorDao {
 
     public int delete(int id);
     public List<Proveedor> findAll();

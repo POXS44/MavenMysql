@@ -8,10 +8,10 @@ public class Conexion {
     public static Connection conectar() {
         Connection con = null;
 
-        String password = "Ingeniero.1";
+        String password = "1234";
         String usuario = "root";
         String url = "jdbc:mysql://localhost:3306/mavenmysql?user=" + usuario
-                + "&password=" + password;
+                + "&password=" + password + "&useSSL=false";
         try {
             con = DriverManager.getConnection(url);
             if (con != null) {
